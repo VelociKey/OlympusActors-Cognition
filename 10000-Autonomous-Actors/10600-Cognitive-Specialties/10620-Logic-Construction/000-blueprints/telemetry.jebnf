@@ -1,0 +1,4 @@
+name: telemetry_sidecar_adoption
+description: "Inject Whisper sidecar logging into main entry points"
+inject "sc := whisper.New("AgentName", "agent.lpsv")
+defer sc.Close()" at after "main() {" in file "main.go"

@@ -1,0 +1,17 @@
+# CoderAgent Learning Stats (jeBNF)
+
+Blueprint nomenclature-standardization {
+  executions = 12
+  successes = 11
+  failures = 1
+  efficacy = 4.8
+  last_run = "2026-02-16T19:00:00Z"
+}
+
+Blueprint telemetry-sidecar-adoption {
+  executions = 8
+  successes = 8
+  failures = 0
+  efficacy = 5.0
+  last_run = "2026-02-16T19:30:00Z"
+}

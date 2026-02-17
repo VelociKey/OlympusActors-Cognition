@@ -1,0 +1,96 @@
+# OlympusActors-Cognition Workspace DNA (jeBNF-MPH)
+workspace_name = "OlympusActors-Cognition"
+
+  Item 0  "LICENSE" 6cd1a00ed465f494f31375e8d8c2ccc585b8b4acee4ba0110ba8fbe2dc4d1adc 1313
+  Item 1 .md "README.md" ae6f40f3ffb26998b7b2d71b5d5da25c0c4b10fa4f37cb24c7af72033ecc9546 1384
+  Domain ".gemini" {
+    Item 2 .jebnf "mission.jebnf" 6ad9c484e1f2ba3fb8b6b67b5ffee75e049764f90406c86a4adb24282a42d353 375
+  }
+  Domain "00000-Identity-Foundations" {
+    Item 3 .well-known ".well-known" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "10000-Autonomous-Actors" {
+    Domain "10600-Cognitive-Specialties" {
+      Domain "10610-Architectural-Synthesis" {
+        Item 4 .mod "go.mod" 667525a1176f4cc344da3d4fd895f641d8a0775f8a715a50a2ae6ae17a9c56f0 146
+        Item 5 .go "main.go" 57c8aa4b5611f0490697ef397d6c979d2471134b9631dbb6ea26e0736248b9c0 2809
+      }
+      Domain "10620-Logic-Construction" {
+        Item 6 .lpsv "coder.lpsv" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+        Item 7 .jebnf "coder_stats.jebnf" 609fc9ff1f5c273ebf6cc5ff8d4d37c7187e92ec598a6a0a394ae446cb3b9261 343
+        Item 8 .go "executor.go" 18a15399981f2ef726db6ee1f32b7c15eb709df06254d66ff7860d18bed18509 5419
+        Item 9 .mod "go.mod" 35686d33d0cb80f408d6d5630ab6ca76385aa61891099b6f80cb8be93aa32f82 141
+        Item 10 .sum "go.sum" 1e6d0024f5f484943e248a0359eef2a2347e97eabc8591974424d0c113374961 815
+        Item 11 .go "learning_engine.go" 66ecd94d2582d8f9429947dd2db6511b932dbf3d79f1296eac80342e51d07a9f 3891
+        Item 12 .go "main.go" 410fd981244679a4043d5068d71fe016ce052abf9ab03f52110fe57f27d33f00 8204
+        Item 13 .go "mission_engine.go" 411b38f20b97ada75357eaabe45cc86b4d74dd81bbfd599de15b65f242672417 6647
+        Item 14 .go "mutation_engine.go" e83e71980b3b44d6d280dfc08423584d5ba9216ff48423163a0a33b6c6998719 3638
+        Item 15 .go "prompt_factory.go" 8c8ef89ecb062fe0537b9d1f13ba51ec0410151d70b6e23d43c9a4e8c0fe6c18 2609
+        Item 16 .go "reporter.go" 1f133a449aa3b04e9c49cc832c6c38c8b1e1b815d459d1980818650ec8a0a31a 1483
+        Item 17 .go "validator.go" 56707cf4109fb922d95cf52945f6c66bda9a6961fdb7b9f75446003af9fef41f 2455
+        Domain "blueprints" {
+          Item 18 .jebnf "mission.jebnf" df65fd65aefb64a090ededa6c37287ca7720b44933a5bb4adcb2277bfae63515 251
+          Item 19 .jebnf "nomenclature.jebnf" 897edb5f6f9ac019ba9a4992abd7846508c0da1298f9cdeb1ed803de291314cc 165
+          Item 20 .jebnf "telemetry.jebnf" 8ebea2cbd0849c23fa24c29752e4ac978fa373ffc0e0609e6ad1ea292beb3cde 215
+        }
+      }
+    }
+  }
+  Domain "30000-Federated-Services" {
+    Item 21  "internal" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "50000-Intelligence-Framework" {
+    Domain "510-grammars" {
+      Item 22 .eBNF "workspace.eBNF" 9d297ce579fce64001dd121394e190b23176911455c8aee93c29782165356a69 556
+    }
+    Domain "KnowledgeAnchor" {
+      Domain "ADR" {
+        Item 23 .md "ADR-000-OlympusFabric-Evolution.md" 733ee6020a1c8ef042f35d1531bbd508c9e58f2500596d5cc2829c0e23db4c7f 1911
+      }
+      Domain "Blueprints" {
+        Item 24 .md "Fabric-Orchestrator-State-Machine.md" 8b18487c845b4d0471ad31bfc70eb70fa26ae8759e247ac16397af0bcc9df3e4 2159
+        Item 25 .ebnf "OlympusFabric.workspace.ebnf" 3e2dfc74b766b86a033b34e2dfc4bbbb7e2588be32380467986eb9143794e953 681
+      }
+      Domain "Cycles" {
+        Item 26 .vkcycle "CYC-002.vkcycle" 45d1953e2ebc25a41f643efa6c10c6928f5baac3ed9fc8fac859718a1805d88a 1580
+      }
+      Domain "Tasks" {
+        Item 27 .md "001-Core-Migration.md" a1ca635b7a4713927e4649f10ac0f8f5a816150dcafece8ee374b3f58fbb8ab8 934
+        Item 28 .md "Cycle-Tracking-Plan-CYC-002.md" 3b07ccd2ed58eec78e3d6296cbe8325fdef8b0495f27e5971c815b3eb059a08c 1414
+      }
+    }
+  }
+  Domain "60000-Information-Storage" {
+    Item 29  "persistence" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "70000-Environmental-Harness" {
+    Item 30  "deployment" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "80000-System-Governance" {
+    Item 31 .md "Operational-Guide-Fabric-Orchestrator.md" 8b59cb20e8ffb0b39ee7ded66afd3aa33a432177fcfb13caaadefcd6a6dcdd48 2729
+    Item 32  "compliance" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "C0100-Configuration-Registry" {
+    Item 33  "settings" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "C0200-Execution-Campaigns" {
+    Item 34  "runners" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "C0400-Artifact-Repository" {
+    Item 35  "build-out" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "C0500-Agent-Intelligence-Outputs" {
+    Item 36  "results" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "C0700-System-Operations" {
+    Item 37  "Logs100" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }
+  Domain "C0990-Ephemeral-Scratch" {
+    Item 38  "temp" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+    Item 39 .ebnf "test.ebnf" eaf54a424fc9f8fbdeb9e74dd7979b4e984d947e5229ddb2a16a8fe5d070bb9c 116
+  }
+  Domain "KnowledgeAnchor" {
+    Item 40  "ADR" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+    Item 41  "Blueprints" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+    Item 42  "Tasks" e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0
+  }

@@ -1,0 +1,7 @@
+# ADR-010 Standardization Mission
+# Format: Joe's Extended BNF (jeBNF)
+
+mission ADR010Standardization "Standardize nomenclature across the cluster" {
+  step S1 execute nomenclature-standardization
+  step S2 execute telemetry-sidecar-adoption
+}
