@@ -11,8 +11,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/VelociKey/Olympus2/pkg/mesh"
-	"github.com/VelociKey/Olympus2/pkg/whisper"
+	"Olympus2/90000-Enablement-Labs/P0000-pkg/000-mesh"
+	"Olympus2/90000-Enablement-Labs/P0000-pkg/000-whisper"
 )
 
 // ArchitectAgent: The Structural Pillar (Olympus2 Standard)
@@ -25,7 +25,9 @@ func main() {
 	slog.SetDefault(slog.New(logHandler))
 
 	meshHubURL := os.Getenv("MESH_HUB_URL")
-	if meshHubURL == "" { meshHubURL = "http://localhost:8090" }
+	if meshHubURL == "" {
+		meshHubURL = "http://localhost:8090"
+	}
 
 	sc = whisper.New("Architect", "architect.lpsv")
 
@@ -33,13 +35,13 @@ func main() {
 
 	mux.HandleFunc("/pulse", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "ArchitectAgent: ACTIVE. Role: Guardian of Structure. Status: Healthy.")
-		sc.Log("Pulse", "Success", "heartbeat", "Agent is healthy")
+		sc.Log("Pulse", "Success", "heartbeat", "Agent is healthy", 0)
 	})
 
 	mux.HandleFunc("/audit", func(w http.ResponseWriter, r *http.Request) {
 		slog.Info("🏗️ Architect: Initiating Sovereign Audit")
 		report := performAudit()
-		sc.Log("PerformAudit", "Success", WorkspaceRoot, report)
+		sc.Log("PerformAudit", "Success", WorkspaceRoot, report, 0)
 		fmt.Fprintf(w, "Architect: AUDIT_COMPLETE.\n")
 		fmt.Fprintf(w, "Report: %s", report)
 	})
@@ -58,7 +60,7 @@ func main() {
 		// Self-Register
 		time.Sleep(1 * time.Second)
 		mesh.RegisterWithMesh(context.Background(), meshHubURL, "Architect", 8085, "guardian", []string{"audit", "structural-verification"})
-		
+
 		slog.Info("ArchitectAgent starting", "port", "8085")
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			slog.Error("Server failed", "error", err)
@@ -71,12 +73,12 @@ func main() {
 	shutdownCtx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 	srv.Shutdown(shutdownCtx)
-	sc.Close() 
+	sc.Close()
 	slog.Info("Server stopped")
 }
 
 func performAudit() string {
-	domains := []string{"00000", "10000", "20000", "30000", "40000", "50000", "60000", "70000", "80000", "90000"}
+	domains := []string{"Olympus2/00000", "Olympus2/10000", "Olympus2/20000", "Olympus2/30000", "Olympus2/40000", "Olympus2/50000", "Olympus2/60000", "Olympus2/70000", "Olympus2/80000", "Olympus2/90000"}
 	missing := 0
 	for _, domain := range domains {
 		path := filepath.Join(WorkspaceRoot, domain+"-*")

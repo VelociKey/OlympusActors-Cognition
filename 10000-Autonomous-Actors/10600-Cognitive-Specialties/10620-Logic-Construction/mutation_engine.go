@@ -7,7 +7,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/VelociKey/OlympusGrammar/20000-MCP-Servers/OlympusGrammar/pkg/parser"
+	"OlympusGrammar/20000-Context-Bridges/000-OlympusGrammar/P0000-pkg/000-parser"
 )
 
 // MutationEngine (MGS) processes structured mutation tasks

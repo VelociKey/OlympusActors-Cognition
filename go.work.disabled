@@ -1,0 +1,6 @@
+go 1.25.7
+
+use (
+	./10000-Autonomous-Actors/10600-Cognitive-Specialties/10610-Architectural-Synthesis
+	./10000-Autonomous-Actors/10600-Cognitive-Specialties/10620-Logic-Construction
+)

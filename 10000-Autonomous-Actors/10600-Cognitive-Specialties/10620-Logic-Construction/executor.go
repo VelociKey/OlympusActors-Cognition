@@ -68,7 +68,7 @@ func (e *Executor) Execute(ctx context.Context, workspace string, taskIR string,
 	}
 
 	taskID := fmt.Sprintf("TASK-%d", time.Now().Unix())
-	
+
 	// Stage 2: Planning / Dry Run
 	if mode == ModeDryRun {
 		planOutput, err := e.server.engine.ExecuteMutationIR(ctx, workspace, taskIR, true)
@@ -98,7 +98,7 @@ func (e *Executor) Execute(ctx context.Context, workspace string, taskIR string,
 
 		if attempt > 0 {
 			slog.Info("🩹 Executor: Attempting Self-Healing", "attempt", attempt, "max", maxHeals)
-			
+
 			// Extract error context
 			var errCtx string
 			if lastReport != nil {
@@ -110,7 +110,7 @@ func (e *Executor) Execute(ctx context.Context, workspace string, taskIR string,
 			}
 
 			healingPrompt := fmt.Sprintf("FIX THE FOLLOWING REGRESSION FROM THE PREVIOUS ATTEMPT.\nERROR:\n%s\nORIGINAL TASK: %s", errCtx, taskIR)
-			
+
 			targetPath, _ := validateSandbox(workspace)
 			healOut, err := e.server.RunGemini(ctx, targetPath, healingPrompt, false)
 			if err != nil {

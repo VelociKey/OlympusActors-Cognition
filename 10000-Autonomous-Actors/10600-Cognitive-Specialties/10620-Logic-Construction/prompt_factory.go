@@ -33,35 +33,27 @@ func AssemblePrompt(mt MutationTask) string {
 	sb.WriteString("EXECUTE THE FOLLOWING STRUCTURED CODE MUTATION.\n\n")
 
 	sb.WriteString(fmt.Sprintf("MISSION: %s\n", mt.Name))
-	sb.WriteString(fmt.Sprintf("OBJECTIVE: %s\n", mt.Description))
+	sb.WriteString(fmt.Sprintf("OBJECTIVE: %s\n\n", mt.Description))
 
-	sb.WriteString("\n--- MUTATION INSTRUCTIONS ---\n")
+	sb.WriteString("INSTRUCTIONS:\n")
 	switch mt.Mutation.Type {
 	case "rename":
-		sb.WriteString(fmt.Sprintf("ACTION: Rename '%s' to '%s'.\n", mt.Mutation.Old, mt.Mutation.New))
+		sb.WriteString(fmt.Sprintf("- Rename symbol '%s' to '%s' in scope '%s'.\n", mt.Mutation.Old, mt.Mutation.New, mt.Mutation.In))
 	case "replace":
-		sb.WriteString(fmt.Sprintf("ACTION: Replace exactly '%s' with '%s'.\n", mt.Mutation.Pattern, mt.Mutation.Value))
+		sb.WriteString(fmt.Sprintf("- Replace pattern '%s' with value '%s' in file '%s'.\n", mt.Mutation.Pattern, mt.Mutation.Value, mt.Mutation.In))
 	case "inject":
-		sb.WriteString(fmt.Sprintf("ACTION: Inject the following snippet:\n```\n%s\n```\nPOSITION: %s\n", mt.Mutation.Snippet, mt.Mutation.Anchor))
+		sb.WriteString(fmt.Sprintf("- Inject the following snippet near anchor '%s' in file '%s':\n%s\n", mt.Mutation.Anchor, mt.Mutation.In, mt.Mutation.Snippet))
 	case "cleanup":
-		sb.WriteString(fmt.Sprintf("ACTION: Perform nomenclature cleanup based on standard: %s.\n", mt.Mutation.Old))
+		sb.WriteString(fmt.Sprintf("- Perform logical cleanup in scope '%s'.\n", mt.Mutation.In))
 	}
-
-	if mt.Mutation.Scope != "" {
-		sb.WriteString(fmt.Sprintf("SCOPE: %s\n", mt.Mutation.Scope))
-	}
-
-	sb.WriteString("\n--- GOVERNANCE & QUALITY ---\n")
-	sb.WriteString("1. MANDATORY: Follow ADR-010 for naming (Clean functional names, no 'Agent' suffix unless specified).\n")
-	sb.WriteString("2. SAFETY: Only modify string literals, log messages, and pulse responses unless structural change is requested.\n")
-	sb.WriteString("3. INTEGRITY: Do not break existing imports or circular dependencies.\n")
 
 	if len(mt.Validations) > 0 {
-		sb.WriteString("\n--- POST-CONDITION CHECKS ---\n")
+		sb.WriteString("\nPOST-MUTATION VALIDATIONS:\n")
 		for _, v := range mt.Validations {
-			sb.WriteString(fmt.Sprintf("- Run: %s\n", v))
+			sb.WriteString(fmt.Sprintf("- %s\n", v))
 		}
 	}
 
+	sb.WriteString("\nRESPOND ONLY WITH THE FINAL MODIFIED CODE OR THE ACTIONS PERFORMED. DO NOT ADD PREAMBLES.")
 	return sb.String()
 }
