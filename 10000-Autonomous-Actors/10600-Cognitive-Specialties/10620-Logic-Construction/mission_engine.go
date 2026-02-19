@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	olympusv1 "Olympus2/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/000-000-v1"
+	olympusv1 "Olympus2/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/000-olympus/000-v1"
 	"OlympusGrammar/20000-Context-Bridges/000-OlympusGrammar/P0000-pkg/000-parser"
 )
 
