@@ -5,6 +5,14 @@ go 1.25.7
 // Local Resolution
 replace Olympus2 => ../Olympus2
 
+replace Olympus2/00000-Identity-Foundations/P0000-pkg/check.v1 => ../Olympus2/00000-Identity-Foundations/P0000-pkg/check.v1
+
+replace Olympus2/00000-Identity-Foundations/P0000-pkg/go-internal => ../Olympus2/00000-Identity-Foundations/P0000-pkg/go-internal
+
+replace Olympus2/00000-Identity-Foundations/P0000-pkg/pretty => ../Olympus2/00000-Identity-Foundations/P0000-pkg/pretty
+
+replace Olympus2/00000-Identity-Foundations/P0000-pkg/text => ../Olympus2/00000-Identity-Foundations/P0000-pkg/text
+
 replace OlympusActors-Delegation => ../OlympusActors-Delegation
 
 replace OlympusAscent => ../OlympusAscent
@@ -42,6 +50,8 @@ replace OlympusGrammar => ../OlympusGrammar
 replace OlympusInfrastructure => ../OlympusInfrastructure
 
 replace OlympusVision => ../OlympusVision
+
+replace github.com/mark3labs/mcp-go => ../OlympusForge/ZC0400-Sovereign-Source/mcp-go
 
 replace text => ../Olympus2/00000-Identity-Foundations/P0000-pkg/text
 
