@@ -1,7 +1,7 @@
 package main
 
 import "context"
-import "dagger/olympusactors-cognition/internal/dagger"
+import "olympus.fleet/00SDLC/OlympusForge/70000-Environmental-Harness/dagger/olympusactors-cognition/internal/dagger"
 
 type OlympusActorsCognition struct{}
 

@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	olympusv1 "Olympus2/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/olympus/v1"
-	"OlympusGrammar/20000-Context-Bridges/000-OlympusGrammar/P0000-pkg/000-parser"
+	olympusv1 "olympus.fleet/00SDLC/Olympus2/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/olympus/v1"
+	"olympus.fleet/00SDLC/OlympusGrammar/20000-Context-Bridges/000-olympus.fleet/00SDLC/OlympusGrammar/P0000-pkg/000-parser"
 )
 
 // MissionEngine handles batch operations and complex multi-step missions.

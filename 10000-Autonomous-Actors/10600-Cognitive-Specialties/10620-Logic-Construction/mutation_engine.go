@@ -7,7 +7,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"OlympusGrammar/20000-Context-Bridges/000-OlympusGrammar/P0000-pkg/000-parser"
+	"olympus.fleet/00SDLC/OlympusGrammar/20000-Context-Bridges/000-olympus.fleet/00SDLC/OlympusGrammar/P0000-pkg/000-parser"
 )
 
 // MutationEngine (MGS) processes structured mutation tasks
