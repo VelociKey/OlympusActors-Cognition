@@ -13,7 +13,7 @@ import (
 	"syscall"
 	"time"
 
-	"olympus.fleet/ext/connectrpc/connect"
+	"connectrpc.com/connect"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
 
