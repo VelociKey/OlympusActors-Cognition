@@ -11,8 +11,8 @@ import (
 	"syscall"
 	"time"
 
-	"olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0000-pkg/000-mesh"
-	"olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0000-pkg/000-whisper"
+	"olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/150-Mesh"
+	"olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/220-Whisper"
 )
 
 // ArchitectAgent: The Structural Pillar (Olympus2 Standard)
