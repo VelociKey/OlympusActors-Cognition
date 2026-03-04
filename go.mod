@@ -1,12 +1,12 @@
-module OlympusActors-Cognition
+module olympus.fleet/00SDLC/OlympusActors-Cognition
 
-go 1.25.7
+go 1.26.0
 
 // Local Resolution
 
 require (
 	connectrpc.com/connect v1.19.1
-	golang.org/x/net v0.50.0
+	golang.org/x/net v0.51.0
 )
 
 require (

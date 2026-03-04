@@ -11,8 +11,8 @@ import (
 	"syscall"
 	"time"
 
-	"Olympus2/90000-Enablement-Labs/P0000-pkg/000-mesh"
-	"Olympus2/90000-Enablement-Labs/P0000-pkg/000-whisper"
+	mesh "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/150-Mesh"
+	whisper "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/220-Whisper"
 )
 
 // ArchitectAgent: The Structural Pillar (Olympus2 Standard)
@@ -78,7 +78,7 @@ func main() {
 }
 
 func performAudit() string {
-	domains := []string{"Olympus2/00000", "Olympus2/10000", "Olympus2/20000", "Olympus2/30000", "Olympus2/40000", "Olympus2/50000", "Olympus2/60000", "Olympus2/70000", "Olympus2/80000", "Olympus2/90000"}
+	domains := []string{"olympus.fleet/00SDLC/Olympus2/00000", "olympus.fleet/00SDLC/Olympus2/10000", "olympus.fleet/00SDLC/Olympus2/20000", "olympus.fleet/00SDLC/Olympus2/30000", "olympus.fleet/00SDLC/Olympus2/40000", "olympus.fleet/00SDLC/Olympus2/50000", "olympus.fleet/00SDLC/Olympus2/60000", "olympus.fleet/00SDLC/Olympus2/70000", "olympus.fleet/00SDLC/Olympus2/80000", "olympus.fleet/00SDLC/Olympus2/90000"}
 	missing := 0
 	for _, domain := range domains {
 		path := filepath.Join(WorkspaceRoot, domain+"-*")
