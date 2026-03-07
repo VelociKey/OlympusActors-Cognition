@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	olympusv1 "olympus.fleet/00SDLC/Olympus2/40000-Communication-Contracts/430-Protocol-Definitions/400-Gen/olympus/v1"
+	olympusv1 "olympus.fleet/00SDLC/Olympus2/40000-Communication-Contracts/40400-Protocol-Synthetics/connect-rpc/olympus/v1"
 	"olympus.fleet/00SDLC/OlympusGrammar/parser"
 )
 

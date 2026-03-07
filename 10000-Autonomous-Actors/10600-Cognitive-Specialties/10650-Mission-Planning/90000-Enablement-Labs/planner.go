@@ -6,8 +6,8 @@ import (
 	"log/slog"
 
 	"connectrpc.com/connect"
-	olympusv1 "olympus.fleet/00SDLC/OlympusFabric/gen/v1/agent"
-	"olympus.fleet/00SDLC/OlympusFabric/gen/v1/agent/agentv1connect"
+	olympusv1 "olympus.fleet/00SDLC/OlympusFabric/40000-Communication-Contracts/40400-Protocol-Synthetics/connect-rpc/v1/agent"
+	"olympus.fleet/00SDLC/OlympusFabric/40000-Communication-Contracts/40400-Protocol-Synthetics/connect-rpc/v1/agent/agentv1connect"
 )
 
 // MissionPlanner orchestrates the generation of new missions based on history.

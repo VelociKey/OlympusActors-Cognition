@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"olympus.fleet/00SDLC/OlympusFabric/gen/v1/agent/agentv1connect"
+	"olympus.fleet/00SDLC/OlympusFabric/40000-Communication-Contracts/40400-Protocol-Synthetics/connect-rpc/v1/agent/agentv1connect"
 
-	mesh "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/150-Mesh"
+	mesh "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/90200-Logic-Libraries/150-Mesh"
 )
 
 func main() {

@@ -11,13 +11,8 @@ import (
 	"syscall"
 	"time"
 
-<<<<<<< HEAD
-	mesh "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/150-Mesh"
-	whisper "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/220-Whisper"
-=======
-	"olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/150-Mesh"
-	"olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/220-Whisper"
->>>>>>> origin/development
+	mesh "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/90200-Logic-Libraries/150-Mesh"
+	whisper "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/90200-Logic-Libraries/220-Whisper"
 )
 
 // ArchitectAgent: The Structural Pillar (Olympus2 Standard)
