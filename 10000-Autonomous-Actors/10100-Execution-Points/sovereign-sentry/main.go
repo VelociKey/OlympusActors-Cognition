@@ -1,13 +1,13 @@
 package main
 
 import (
-	"bufio"
-	"fmt"
 	"log/slog"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strings"
-	"time"
+
+	whisper "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/90200-Logic-Libraries/220-Whisper"
 )
 
 // Sovereign Sentry - Evolutionary Optimizer
@@ -24,12 +24,28 @@ func main() {
 	cmd := exec.Command(gemaidPath, "sentry", "evaluate")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	
+
 	if err := cmd.Run(); err != nil {
 		slog.Error("FAILED [Sentry] GemAid sentry evaluation failed", "error", err)
-		os.Exit(1)
+		// Continue to monitoring despite evaluation failure
 	}
 
-	// TODO: Implement Whisper Bus listener for real-time failure signals
-	slog.Info("COMPLETE [Sentry] Daily review finalized.")
+	slog.Info("COMPLETE [Sentry] Daily review finalized. Starting Real-time Watchdog...")
+
+	// Locate MeshHub Log
+	logDir := os.Getenv("WHISPER_LOG_DIR")
+	if logDir == "" {
+		// Fallback to absolute workspace standard path if env is missing
+		logDir = "C:/aAntigravitySpace/olympus.fleet/00SDLC/Olympus2/C0500-Agent-Intelligence-Outputs/LPSV"
+	}
+	meshLog := filepath.Join(logDir, "meshhub.lpsv")
+
+	// Start Listening
+	events := whisper.NewListener(meshLog)
+	for event := range events {
+		if strings.Contains(event, "OFFLINE") {
+			slog.Warn("🚨 AGENT OFFLINE DETECTED", "event", event)
+			// Future: Trigger remediation or alert via EventBus
+		}
+	}
 }

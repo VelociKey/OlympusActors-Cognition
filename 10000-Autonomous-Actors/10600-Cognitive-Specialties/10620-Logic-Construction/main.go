@@ -196,7 +196,7 @@ func main() {
 	server := &CoderServer{
 		agentToken:      token,
 		memoryClient:    olympusv1connect.NewMemoryServiceClient(http.DefaultClient, getEnv("MEMORY_URL", "http://localhost:8084"), interceptors),
-		knowledgeClient: olympusv1connect.NewKnowledgeServiceClient(http.DefaultClient, getEnv("CARTOGRAPHER_URL", "http://localhost:8095"), interceptors),
+		knowledgeClient: olympusv1connect.NewKnowledgeServiceClient(http.DefaultClient, getEnv("CARTOGRAPHER_URL", "http://localhost:8096"), interceptors),
 		inferenceClient: olympusv1connect.NewInferenceServiceClient(http.DefaultClient, getEnv("INFERENCE_URL", "http://localhost:8087"), interceptors),
 		auditClient:     olympusv1connect.NewAuditServiceClient(http.DefaultClient, getEnv("AUDIT_URL", "http://localhost:8086"), interceptors),
 		sc:              whisper.New("Coder", "coder.lpsv"),
