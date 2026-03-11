@@ -1,0 +1,13 @@
+Agent {
+  ID = "sovereign-sentry-01";
+  Name = "Sovereign Sentry";
+  Workspace = "00SDLC/OlympusActors-Cognition/sovereign-sentry";
+  Role = "Toolchain Health & Evolutionary Optimizer";
+  Capabilities = [
+    "ErrorClustering",
+    "GoToolScaffolding",
+    "WhisperBusListening",
+    "LPSVTelemetry"
+  ];
+  Initiator = "AI";
+}
